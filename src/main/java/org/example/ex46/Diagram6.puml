@@ -1,9 +1,15 @@
+
 @startuml
-'https://plantuml.com/sequence-diagram
-
-autonumber
-
-Main -> countFile:call function to count with string
-countFile-->Main:return count
+class App {
+  {method} modify-->modified
+  String : equals(word)
+}
+class count{
+  {field} File file
+  String : equals(word)
+}
+class App
+App - count : word >
 
 @enduml
+

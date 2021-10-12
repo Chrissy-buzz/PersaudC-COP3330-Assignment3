@@ -11,3 +11,33 @@ createCSS-->Main: new file created
 createJava-->Main:new file created
 
 @enduml
+
+
+@startuml
+class App {
+  {field} File fil
+  {method} creatFile-->output.dir
+  {method} createJava-->output.java
+  {method} createCSS-->output.css
+
+  + getFile()
+  + getJava()
+  + getCSS()
+
+}
+class createFile {
+  {field} String webN
+  {field} String auth
+}
+class createCSS {
+  {field} String webN
+}
+class createJava {
+  {field} String webN
+}
+class App
+App - createFile : getFile >
+App - createJava : getJava >
+App - createCSS : getCSS >
+
+@enduml

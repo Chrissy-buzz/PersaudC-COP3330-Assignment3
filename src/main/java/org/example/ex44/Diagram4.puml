@@ -1,9 +1,15 @@
+
 @startuml
-'https://plantuml.com/sequence-diagram
-
-autonumber
-
-Main -> productEnum:Search for Thing
-productEnum-->Main:return Thing Price & Quantity
+class App {
+  {field} File fil
+  {method} search-->found
+  Object : equals(file)
+}
+class search{
+  Object : equals(file)
+}
+class App
+App - search : file >
 
 @enduml
+

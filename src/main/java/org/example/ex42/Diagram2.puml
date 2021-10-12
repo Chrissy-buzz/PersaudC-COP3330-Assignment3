@@ -1,9 +1,16 @@
+
 @startuml
-'https://plantuml.com/sequence-diagram
+class App {
+  {field} File fil
+  {method} convert-->fil.modified
+  Object : equals(file)
 
-autonumber
-
-Main -> convert: call function w/input file
-convert --> Main: Modify input file
+}
+class convert{
+  Object : equals(file)
+}
+class App
+App - convert : file >
 
 @enduml
+

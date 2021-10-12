@@ -1,9 +1,15 @@
+
 @startuml
-'https://plantuml.com/sequence-diagram
-
-autonumber
-
-Main -> modifyFile:call function to modify
-modifyFile-->Main:file modified
+class App {
+  {field} File file
+  {method} modify-->modified
+  String : equals(file)
+}
+class modify{
+  String : equals(file)
+}
+class App
+App - modify : file >
 
 @enduml
+
