@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Main -> modifyFile:call function to modify
+modifyFile-->Main:file modified
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Main -> convert: call function w/input file
+convert --> Main: Modify input file
+
+@enduml

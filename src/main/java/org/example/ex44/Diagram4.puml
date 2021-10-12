@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Main -> productEnum:Search for Thing
+productEnum-->Main:return Thing Price & Quantity
+
+@enduml

@@ -15,8 +15,10 @@ class App {
     static void modifyFile(String filePath) {
 
         try {
+            //create new file
             File f = new File("program.txt");
-            String oldContent = "";
+            //empty sting for old txt
+            String old = "";
 
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
@@ -25,17 +27,17 @@ class App {
             String line = reader.readLine();
 
             while (line != null) {
-                oldContent = oldContent + line + System.lineSeparator();
+                old = old + line + System.lineSeparator();
 
                 line = reader.readLine();
             }
 
-            //Replacing oldString with newString in the oldContent
+            //Replacing old with newString
 
-            String newContent = oldContent.replaceAll("utilize", "use");
+            String newContent = old.replaceAll("utilize", "use");
             FileWriter writer = new FileWriter(f);
 
-            //Rewriting the input text file with newContent
+            //Write the new Contect into the same file
             writer.write(newContent);
             writer.close();
             reader.close();
@@ -46,10 +48,13 @@ class App {
     }
 
     public static void main (String [] args){
+        //Scan user input
        Scanner in = new Scanner(System.in);
        System.out.print("Enter a filename ");
        String filename = in.nextLine();
 
+       //Please use the Location in your own Computer
+        //Call modify file
         modifyFile("C:\\Users\\Christina\\OneDrive\\Desktop\\" + filename);
         System.out.println("done");
     }

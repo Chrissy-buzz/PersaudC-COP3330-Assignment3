@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Main -> convertFile: call function
+convertFile --> Main: Return Null
+convertFile-->: output file
+
+@enduml

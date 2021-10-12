@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Main -> countFile:call function to count with string
+countFile-->Main:return count
+
+@enduml
